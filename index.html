@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark-academia">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AcademiaOS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1"
+  }
+}
+</script>
+<style>
+:root {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+[data-theme='dark-academia'] {
+  --bg-primary: #1c1917; /* stone-900 */
+  --bg-secondary: #292524; /* stone-800 */
+  --bg-interactive: #44403c; /* stone-700 */
+  --bg-interactive-alpha: rgba(41, 37, 36, 0.5); /* stone-800/50 */
+  --bg-interactive-alpha-2: rgba(41, 37, 36, 0.6); /* stone-800/60 */
+  --border-primary: #44403c; /* stone-700 */
+  --border-secondary: #57534e; /* stone-600 */
+  --border-accent: #d97706; /* amber-600 */
+  --text-primary: #e7e5e4; /* stone-200 */
+  --text-secondary: #a8a29e; /* stone-400 */
+  --text-muted: #78716c; /* stone-500 */
+  --text-header: #fde68a; /* amber-200 */
+  --accent-primary: #d97706; /* amber-600 */
+  --accent-primary-hover: #b45309; /* amber-700 */
+  --accent-secondary: #f59e0b; /* amber-500 */
+  --accent-secondary-hover: #fcd34d; /* amber-300 */
+  --danger-primary: #ef4444; /* red-500 */
+}
+[data-theme='light-academia'] {
+  --bg-primary: #fdf6e3; /* A warm off-white */
+  --bg-secondary: #f4e9d8;
+  --bg-interactive: #e8dbcc;
+  --bg-interactive-alpha: rgba(232, 219, 204, 0.5);
+  --bg-interactive-alpha-2: rgba(232, 219, 204, 0.6);
+  --border-primary: #dcd0c0;
+  --border-secondary: #c9bbae;
+  --border-accent: #8c5a2b; /* A sepia tone */
+  --text-primary: #4d423a; /* Dark brown */
+  --text-secondary: #7a6a5d;
+  --text-muted: #998a7d;
+  --text-header: #8c5a2b;
+  --accent-primary: #8c5a2b;
+  --accent-primary-hover: #6b4621;
+  --accent-secondary: #a67b5b;
+  --accent-secondary-hover: #8c5a2b;
+  --danger-primary: #c2410c; /* rust-700 */
+}
+[data-theme='midnight-dusk'] {
+  --bg-primary: #0f172a; /* slate-900 */
+  --bg-secondary: #1e293b; /* slate-800 */
+  --bg-interactive: #334155; /* slate-700 */
+  --bg-interactive-alpha: rgba(30, 41, 59, 0.5);
+  --bg-interactive-alpha-2: rgba(30, 41, 59, 0.6);
+  --border-primary: #334155; /* slate-700 */
+  --border-secondary: #475569; /* slate-600 */
+  --border-accent: #ec4899; /* pink-500 */
+  --text-primary: #e2e8f0; /* slate-200 */
+  --text-secondary: #94a3b8; /* slate-400 */
+  --text-muted: #64748b; /* slate-500 */
+  --text-header: #c084fc; /* purple-400 */
+  --accent-primary: #ec4899; /* pink-500 */
+  --accent-primary-hover: #db2777; /* pink-600 */
+  --accent-secondary: #67e8f9; /* cyan-300 */
+  --accent-secondary-hover: #a5f3fc; /* cyan-200 */
+  --danger-primary: #f43f5e; /* rose-500 */
+}
+[data-theme='evergreen'] {
+  --bg-primary: #1a2e23;
+  --bg-secondary: #244234;
+  --bg-interactive: #2f5643;
+  --bg-interactive-alpha: rgba(36, 66, 52, 0.5);
+  --bg-interactive-alpha-2: rgba(36, 66, 52, 0.6);
+  --border-primary: #2f5643;
+  --border-secondary: #3b6b53;
+  --border-accent: #65a30d; /* lime-600 */
+  --text-primary: #e0e6e3;
+  --text-secondary: #a0ada6;
+  --text-muted: #829189;
+  --text-header: #a3e635; /* lime-400 */
+  --accent-primary: #65a30d; /* lime-600 */
+  --accent-primary-hover: #4d7c0f; /* lime-700 */
+  --accent-secondary: #84cc16; /* lime-500 */
+  --accent-secondary-hover: #a3e635; /* lime-400 */
+  --danger-primary: #e11d48; /* rose-600 */
+}
+</style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-[var(--bg-primary)]">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
